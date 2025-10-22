@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+header {
+  /* background-image: url(Imgs/Tastyfood\ \(17\).jpeg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: sticky;
+  background-color: #000;
+  color: #ffffff;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  /* logo left, nav right */
+  align-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+}
+
+nav {
+  flex: 1;
+  /* take available space */
+  display: flex;
+  justify-content: flex-end;
+  /* push navlinks to the right */
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-evenly;
+  /* spread links evenly */
+  flex: 0.6;
+  /* controls how wide the right side is */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  padding: 10px 15px;
+}
+
+.navlinks li a:hover {
+  background-color: #e01f1c;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.logo{
+  display: flex;
+  align-items: cente;
+  justify-items: center;
+}
+
+.logo h1 {
+  font-size: 3rem;
+  font-family: Sacramento;
+  font-weight: 600;
+}
+ .logo img {
+  width: 50px;
+  height: 50px;
+}
+.foo {
+  color: #ff0400;
+}
+
+.active {
+  background-color: #ff0400;
+  border-radius: 5px;
+}
+
+main {
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url(Imgs/Tastyfood\ \(17\).jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-section .contents {
+  height: auto;
+  width: 800px;
+  color: #fff;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  padding: 50px 50px;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+   background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+}
+
+.hero-section .contents p {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.h1text {
+  color: #000;
+  font-family: Sacramento;
+  font-size: 3rem;
+}
+
+button {
+  margin-top: 23px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+}
+
+.btn1 {
+  background-color: #ff0400;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.btn2 {
+  color: #000;
+}
+
+.btn1:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ff0400;
+  transition: 0.3s ease-in-out;
+}
+
+.btn2:hover {
+  background-color: #ff0400;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+#about-us {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.image img{
+  height: 100%;
+  width: 600px;
+  border-radius: 25px;
+  box-shadow: 9px 0px 40px rgba(255, 255, 255, 0.1);
+}
+
+
+.text {
+  font-family: verdana;
+  align-content: center;
+  justify-content: center;
+  width: 60%;
+  line-height: 2rem;
+}
+
+.text h1{
+  font-size: 3rem;
+  font-family: Sacramento;
+  padding-bottom: 20px;
+}
+
+.btn3 {
+  background-color: rgb(255, 4, 0);
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.btn3:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ff0400;
+  transition: 0.3s ease-in-out;
+}
+
+.btn4 {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ff0400
+}
+
+.btn4:hover {
+  background-color: #ff0400;
+  color: #fff;
+  ;
+  transition: 0.3s ease-in-out;
+}
+#product {
+  padding: 40px 0;
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+}
+
+/* Section heading */
+.productheading h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sacramento", cursive;
+  font-size: 3.2rem;
+  margin-bottom: 40px;
+}
+
+.productheading .foo {
+  color: #ff3b3b;
+}
+
+/* Container for all product cards */
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allow items to wrap to new rows */                  /* space between cards */
+  gap: 25px; /* space between cards */
+  padding: 0 30px;
+  max-width: 1400px;           /* ✅ keeps it balanced on large screens */
+  margin: 0 auto;   
+    resize: vertical;
+  overflow: scroll;
+}
+
+/* Each product card */
+.product-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 15px;
+  width: 280px;           /* uniform card width */
+  height: 400px;          /* uniform card height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 15px rgba(255, 1, 1, 0.3);
+}
+
+/* Product image */
+img.p1 {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Text area */
+.imgtxt {
+  text-align: center;
+}
+
+.imgtxt h3 {
+  font-family: "Sacramento", cursive;
+  font-size: 1.7rem;
+  margin: 8px 0;
+}
+
+.imgtxt p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Price and button */
+.txtprc {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.addbtn {
+  background: #ff0400;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addbtn:hover {
+  background: transparent;
+  border: 1px solid #ff0400;
+  color: #fff;
+}
