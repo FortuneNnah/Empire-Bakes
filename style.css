@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+/* body{
+  background: #000;
+} */
+
 h1,
 h2,
 h3 {
@@ -129,7 +133,7 @@ nav {
   color: #d9625f;
 }
 
-.cart{
+.cart {
   position: fixed;
   top: 0;
   right: -100%;
@@ -143,23 +147,24 @@ nav {
   overflow: auto;
   transition: 0.7s;
 }
-.cart.active{
+
+.cart.active {
   right: 0;
 }
 
 
-.cart-title{
+.cart-title {
   text-align: center;
   font-size: 25px;
 }
 
-.cart-box{
+.cart-box {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
-.cart-box img{
+.cart-box img {
   width: 100px;
   height: 100px;
   border-radius: 6px;
@@ -167,29 +172,29 @@ nav {
   margin-right: 20px;
 }
 
-.cart-detail{
+.cart-detail {
   display: grid;
   gap: 8px;
   margin-right: auto;
 }
 
-.cart-product-title{
+.cart-product-title {
   font-size: 16px;
   line-height: 1;
 }
 
-.cart-price{
+.cart-price {
   font-weight: 500;
 }
 
-.cart-quantity{
+.cart-quantity {
   display: flex;
   width: 100px;
   border: 1px solid #999;
   border-radius: 6px;
 }
 
-.cart-quantity button{
+.cart-quantity button {
   background: transparent;
   width: 30px;
   border: none;
@@ -197,14 +202,15 @@ nav {
   cursor: pointer;
 }
 
-.cart-quantity #decrement{
+.cart-quantity #decrement {
   color: #999;
 }
-.cart-quantity #increment{
+
+.cart-quantity #increment {
   color: #fff;
 }
 
-.cart-quantity .number{
+.cart-quantity .number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,13 +220,13 @@ nav {
   cursor: default;
 }
 
-.cart-delete{
+.cart-delete {
   cursor: pointer;
   font-size: 20px;
   color: #ff0400;
 }
 
-.total{
+.total {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -230,12 +236,12 @@ nav {
 }
 
 
-.total-price{
+.total-price {
   margin-left: 10px;
   font-weight: 600;
 }
 
-.btn-buy{
+.btn-buy {
   display: block;
   padding: 10px 30px;
   background: #e01f1c;
@@ -247,7 +253,7 @@ nav {
   cursor: pointer;
 }
 
-#cart-close{
+#cart-close {
   position: absolute;
   top: 20px;
   right: 15px;
@@ -262,8 +268,10 @@ main {
   height: 100vh;
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  background-image: url(Imgs/Tastyfood\ \(17\).jpeg);
+  background-image: url(Imgs/newimgs\ \(2\).jpeg);
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -274,25 +282,27 @@ main {
   width: 800px;
   color: #fff;
   margin-left: 20px;
-  margin-bottom: 50px;
+  /* margin-bottom: 20px; */
   padding: 80px 70px;
-  text-align: left;
-  align-items: left;
+  text-align: center;
+  align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
 }
 
 .hero-section .contents p {
-  line-height: 1.5rem;
+  line-height: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
 .h1text {
-  color: #000;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #fff;
   font-family: Sacramento;
   font-size: 3rem;
 }
@@ -305,6 +315,11 @@ button {
   border: 1px solid transparent;
   font-size: 1rem;
 } */
+
+.btn1 a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .btn1 {
   background-color: #ff0400;
@@ -347,9 +362,9 @@ button {
   flex: 1;
   padding: 20px 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
 }
 
 .image img {
@@ -375,7 +390,7 @@ button {
   font-size: 2rem;
   font-weight: 300;
   /* font-family: Sacramento; */
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 
 }
 
@@ -428,7 +443,7 @@ button {
   align-items: center;
   /* font-family: "Sacramento"; */
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .productheading .foo {
@@ -438,44 +453,40 @@ button {
 /* Container for all product cards */
 .product-container {
   display: flex;
+  align-items: center;
+  justify-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* allow items to wrap to new rows */
-  /* space between cards */
   gap: 25px;
-  /* space between cards */
   padding: 0 30px;
   max-width: 1400px;
-  /* ✅ keeps it balanced on large screens */
   margin: 0 auto;
-  resize: vertical;
-  overflow: scroll;
+  /* resize: vertical; */
+  overflow: auto;
 }
 
 /* Each product card */
 .product-card {
-  background: #111;
+  background: #000;
   border: 1px solid #333;
   border-radius: 15px;
   width: 280px;
-  /* uniform card width */
   height: 400px;
-  /* uniform card height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 
 }
 
-.product-card:hover img {
-  transform: scale(1.1);
+.product-card:hover{
+  transform: scale(1.02);
   transition: all 0.5s ease-in-out;
-  /* transform: translateY(-6px); */
-  /* box-shadow: 0 8px 30px rgba(255, 1, 1, 0.3); */
+  /* transform: translateY(-6px);  */
+   box-shadow: 0 8px 30px rgba(255, 1, 1, 0.3);
 }
 
 
@@ -536,6 +547,72 @@ img.p1 {
   border: 1px solid #ff0400;
   color: #fff;
 }
+.customerreview {
+  padding: 60px 20px;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center;     /* centers horizontally */
+}
+
+.customerreview h1 {
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.customerreview .foodcards {
+  display: flex;
+  justify-content: space-evenly; /* 👈 spaces the cards evenly */
+  align-items: center;
+  flex-wrap: wrap; /* keeps it responsive on smaller screens */
+  width: 100%;     /* ensures even spacing across the section */
+  font-family: sans-serif;
+  gap: 30px;       /* small gap between cards */
+  padding: 30px 0;
+}
+
+.foodcards .foodcard {
+  width: 280px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; /* centers content inside each card */
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.foodcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+}
+
+.foodcard h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+.foodcard p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.foodcard .fa-solid {
+  color: #ff0400;
+  font-size: 2.5rem;
+  padding-bottom: 8px;
+}
+
 
 #toastContainer {
   /* Positioning and size */
@@ -619,6 +696,7 @@ img.p1 {
     opacity: 0;
   }
 }
+
 @media (max-width: 1024px) {
   header {
     padding: 15px 30px;
@@ -627,16 +705,20 @@ img.p1 {
   .hero-section .contents {
     margin: 23px;
     padding: 40px;
+    background-size: contain;
   }
 
   .container {
+    /* padding: 60px; */
     flex-direction: column;
-    text-align: left;
+    text-align: center;
   }
 
   .text {
     width: 100%;
     margin-left: 0;
+    padding-top: 10px;
+
   }
 
   .product-card {
@@ -664,29 +746,30 @@ img.p1 {
     z-index: 125;
   }
 
-  header { 
-    padding: 12px 16px; 
+  header {
+    padding: 12px 16px;
     align-items: center;
-   }
+  }
 
 
   header .logo h1 {
     font-size: 1.8rem;
   }
-   .hero-section {
+
+  .hero-section {
     margin-top: -30px;
     height: 100vh;
     padding: 10px 20px;
-   }
+  }
 
   .hero-section .contents {
     width: 100%;
-
     padding: 25px;
     text-align: center;
   }
 
-  #product{
+  #product {
+    padding-top: 80px;
     height: auto;
   }
 
@@ -718,12 +801,24 @@ img.p1 {
     font-size: 1.8rem;
   }
 
+  .container {
+    margin: 0;
+    gap: -20px;
+    padding: 10px 20px;
+  }
+
+  .container .text {
+    padding-top: -10px;
+  }
+
   .product-card img {
     width: 140px;
     height: 140px;
   }
 
-  .btn1, .btn3, .btn4 {
+  .btn1,
+  .btn3,
+  .btn4 {
     padding: 10px 18px;
     font-size: 0.9rem;
   }

@@ -204,6 +204,7 @@ console.log("Returned total:", total);
     key: publickey,
     email: email,
     amount: amount,
+    product: document.querySelectorAll(".product-title").textContent,
     currency: "NGN",
     ref: "PSK_" + Math.floor(Math.random() * 1000000000),
     callback: function(){
