@@ -22,8 +22,7 @@ body {
 .container {
     width: 100%;
     max-width: 420px;
-    background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 25px;
 }
@@ -40,7 +39,7 @@ body {
 }
 
 .heading p {
-    color: #555;
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
 }
@@ -53,6 +52,7 @@ body {
 }
 
 label {
+    color: #e4dcdc;
     font-weight: 600;
     font-size: 14px;
 }
@@ -85,7 +85,7 @@ label {
 }
 
 .privacy{
-    color: blue;
+    color: rgb(33, 33, 208);
     text-decoration: underline;
 }
 
@@ -156,7 +156,7 @@ label {
 }
 
 .signin a{
-    color: blue;
+    color: rgb(33, 33, 208);
 }
 
 .container{

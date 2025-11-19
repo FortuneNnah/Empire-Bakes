@@ -1,4 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -6,15 +7,10 @@
   box-sizing: border-box;
 }
 
-/* body{
-  background: #000;
-} */
-
-h1,
-h2,
-h3 {
-  font-family: 'Times New Roman', Times, serif;
+body{
+  background: #f1f1f1;
 }
+
 
 header {
   position: sticky;
@@ -57,6 +53,8 @@ nav {
 
 .navlinks {
   display: flex;
+  align-items: center;
+  font-family: sans-serif;
   justify-content: space-evenly;
   flex: 0.6;
   list-style: none;
@@ -68,7 +66,7 @@ nav {
 
 .navlinks li a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-weight: 500;
   transition: 0.3s ease;
   padding: 10px 15px;
@@ -76,8 +74,26 @@ nav {
 
 .navlinks li a:hover {
   background-color: #e01f1c;
+  width: 100%;
   color: #ffffff;
   border-radius: 5px;
+}
+
+/* Mobile nav open overlay */
+.nav-open .navlinks {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 65px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.92);
+  padding: 20px 16px;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.7s ease-in-out;
 }
 
 
@@ -97,13 +113,16 @@ nav {
 }
 
 .logo h1 {
-  font-size: 2.5rem;
+  font-family: lemon;
+  font-size: 2rem;
   font-weight: 300;
 }
 
 .foo {
   color: #ff0400;
 }
+
+
 
 #cartIcon {
   position: relative;
@@ -271,7 +290,6 @@ main {
   justify-content: center;
   align-items: center;
   background-image: url(Imgs/newimgs\ \(2\).jpeg);
-  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -282,8 +300,7 @@ main {
   width: 800px;
   color: #fff;
   margin-left: 20px;
-  /* margin-bottom: 20px; */
-  padding: 80px 70px;
+  padding: 50px 70px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -294,6 +311,7 @@ main {
 }
 
 .hero-section .contents p {
+  font-family: sans-serif;
   line-height: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -303,8 +321,9 @@ main {
   padding-bottom: 10px;
   text-align: center;
   color: #fff;
-  font-family: Sacramento;
+  font-family: lemon;
   font-size: 3rem;
+  font-weight: 300;
 }
 
 /* 
@@ -349,8 +368,7 @@ button {
 #about-us {
   width: 100%;
   height: 100%;
-  background-color: #000000;
-  color: #fff;
+  color: #1f1f1f;
 }
 
 
@@ -389,50 +407,15 @@ button {
 .text h1 {
   font-size: 2rem;
   font-weight: 300;
-  /* font-family: Sacramento; */
+  font-family: lemon;
   padding-bottom: 18px;
 
-}
-
-.btn3 {
-  margin-top: 23px;
-  padding: 12px 25px;
-  border-radius: 50px;
-  border: 1px solid transparent;
-  font-size: 1rem;
-  background-color: rgb(255, 4, 0);
-  color: #ffffff;
-  margin-right: 10px;
-}
-
-.btn3:hover {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #ff0400;
-  transition: 0.3s ease-in-out;
-}
-
-.btn4 {
-  margin-top: 23px;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-size: 1rem;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #ff0400
-}
-
-.btn4:hover {
-  background-color: #ff0400;
-  color: #fff;
-  transition: 0.3s ease-in-out;
 }
 
 #product {
   padding: 40px 0;
   width: 100%;
-  color: #fff;
-  background-color: #000;
+  /* background-color: #000; */
   text-align: center;
 }
 
@@ -441,8 +424,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-family: "Sacramento"; */
-  font-size: 2.5rem;
+  font-family: lemon;
+  color: #1f1f1f ;
+  font-size: 2.3rem;
   padding-bottom: 40px;
 }
 
@@ -461,13 +445,11 @@ button {
   padding: 0 30px;
   max-width: 1400px;
   margin: 0 auto;
-  /* resize: vertical; */
-  overflow: auto;
 }
 
 /* Each product card */
 .product-card {
-  background: #000;
+  /* background: #000; */
   border: 1px solid #333;
   border-radius: 15px;
   width: 280px;
@@ -496,7 +478,7 @@ img.p1 {
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  /* border-radius: 88% 12% 70% 30% / 34% 52% 48% 66%; */
+  border-radius: 88% 12% 90% 30% / 34% 52% 48% 66%;
 }
 
 /* Text area */
@@ -505,14 +487,16 @@ img.p1 {
 }
 
 .imgtxt h3 {
-  font-family: "Sacramento", cursive;
+  font-family: lemon;
+  color: #1f1f1f;
   font-size: 1.1rem;
   margin: 8px 0;
 }
 
 .imgtxt p {
+  color: #1f1f1f;
+  font-family: sans-serif;
   font-size: 0.9rem;
-  color: #ccc;
 }
 
 /* Price and button */
@@ -526,8 +510,8 @@ img.p1 {
 
 .txtprc .price {
   font-size: 1.12rem;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 500;
+  color: #1f1f1f;
 }
 
 .addbtn {
@@ -547,32 +531,35 @@ img.p1 {
   border: 1px solid #ff0400;
   color: #fff;
 }
-.customerreview {
+.foodcards-section {
   padding: 60px 20px;
-  height: 100vh;
-  background-color: #000;
+  min-height: 100vh;
+  background-color: #2c2c2c;
   color: #fff;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centers vertically */
-  align-items: center;     /* centers horizontally */
+  justify-content: center; 
+  align-items: center;     
 }
 
-.customerreview h1 {
+.foodcards-section h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: lemon;
   margin-bottom: 30px;
   color: #fff;
   text-align: center;
 }
 
-.customerreview .foodcards {
+.foodcards-section .foodcards {
   display: flex;
-  justify-content: space-evenly; /* 👈 spaces the cards evenly */
+  justify-content: space-evenly; 
   align-items: center;
-  flex-wrap: wrap; /* keeps it responsive on smaller screens */
-  width: 100%;     /* ensures even spacing across the section */
+  flex-wrap: wrap; 
+  width: 100%;     
   font-family: sans-serif;
-  gap: 30px;       /* small gap between cards */
+  gap: 30px;       
   padding: 30px 0;
 }
 
@@ -582,22 +569,24 @@ img.p1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center; /* centers content inside each card */
+  align-items: center; 
   background-color: transparent;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 1px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 10px rgb(255, 4, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }
 
 .foodcard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+  transform: scale(1.06);
+  box-shadow: 0 8px 30px 3px rgba(224, 18, 18, 0.605);
+  transition: all 0.3s ease-in-out;
+
 }
 
 .foodcard h3 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: lemon;
   font-weight: 500;
 }
 
@@ -615,40 +604,96 @@ img.p1 {
 
 
 #toastContainer {
-  /* Positioning and size */
   visibility: hidden;
-  /* 1. Start hidden */
   min-width: 250px;
   margin-left: -125px;
-  /* Center horizontally (half of min-width) */
-
-  /* Appearance */
   background-color: #333;
-  /* Dark background */
   color: #fff;
-  /* White text */
   text-align: center;
   border-radius: 10px;
   padding: 16px;
-
-  /* Fixed positioning at the bottom-center */
   position: fixed;
   z-index: 9999;
-  /* Ensure it is on top of other content */
   left: 50%;
   top: 30px;
   font-family: sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 2. The class we add with JS to make it visible and trigger animations */
 #toastContainer.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-/* Keyframes for the Animation */
+.customerreview{
+  padding: 60px 20px;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+  color: #fff;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;  
+}
+
+.customerreview .cards{
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  flex-wrap: wrap; 
+  width: 100%;     
+  font-family: sans-serif;
+  gap: 30px;       
+  padding: 30px 0;
+}
+
+.customerreview h1 {
+  font-family: lemon;
+  margin-bottom: 40px;
+  color: #000;
+  text-align: center;
+}
+
+
+.cards .card{
+  width: 280px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; 
+  background-color: #fff;
+  color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 1px 10px rgb(255, 4, 0, 0.3); */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+
+.card h3 {
+  color: #ff0400;
+  font-family: lemon ;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+}
+
+
+.custimg{
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
 @-webkit-keyframes fadein {
   from {
     top: 0;
@@ -785,6 +830,17 @@ img.p1 {
   .cart {
     width: 100%;
   }
+
+  .foodcards{
+    justify-content: center;
+  }
+
+  .foodcards .foodcard{
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 20px;
+  }
 }
 
 /* Very Small Devices (Phones < 500px) */
@@ -822,19 +878,15 @@ img.p1 {
     padding: 10px 18px;
     font-size: 0.9rem;
   }
+
+  .foodcards .foodcard{
+    width: 95%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .foodcard .fa-solid{
+    font-size: 2rem;
+  }
 }
 
-/* Mobile nav open overlay */
-.nav-open .navlinks {
-  display: flex !important;
-  position: fixed;
-  top: 65px;
-  right: 16px;
-  background: rgba(0, 0, 0, 0.92);
-  padding: 20px;
-  border-radius: 12px;
-  flex-direction: column;
-  gap: 12px;
-  width: 200px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
