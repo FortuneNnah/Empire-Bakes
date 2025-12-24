@@ -1,4 +1,4 @@
-//  header scroll/glass effect
+
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
@@ -217,3 +217,32 @@ console.log("Returned total:", total);
   });
   handler.openIframe();
 })
+
+document.querySelectorAll('.produczt-card').forEach(card => {
+  const addBtn = card.querySelector('.addbtn');
+  const qtyBox = card.querySelector('.qty-box');
+  const qtyValue = card.querySelector('.qty-value');
+  const plusBtn = card.querySelector('.qty-plus');
+  const minusBtn = card.querySelector('.qty-minus');
+
+  // When "Add to Cart" is clicked
+  addBtn.addEventListener('click', () => {
+    addBtn.style.display = "none";
+    qtyBox.style.display = "flex";
+  });
+
+  // Increase quantity
+  plusBtn.addEventListener('click', () => {
+    qtyValue.textContent = parseInt(qtyValue.textContent) + 1;
+  });
+
+  // Decrease quantity
+  minusBtn.addEventListener('click', () => {
+    let q = parseInt(qtyValue.textContent);
+    if (q > 1) {
+      qtyValue.textContent = q - 1;
+    }
+  });
+});
+
+

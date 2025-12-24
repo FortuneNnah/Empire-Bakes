@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-
-  <title>TastyFood</title>
+  <title>EmpireBakes N' Sweet Meals</title>
 </head>
 
 <body>
@@ -18,7 +17,7 @@
       </h1>
     </div>
 
-    <nav class="navbar">
+    <div class="navbar">
       <ul class="navlinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about-us">About</a></li>
@@ -26,17 +25,25 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </div>
 
-    <div class="header-icons">
+    <div class="cta">
+      <button class="btn1">Get Started</button>
+    </div>
+
+
+
+    <!-- <div class="header-icons">
       <div id="cartIcon">
-        <i class="fa-solid fa-bag-shopping"></i>
+        <img src="Imgs/shopping-cart.png" alt="">
         <span class="cart-item-count" id="cartCount"></span>
       </div>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
         <i id="menuIcon" class="fa-solid fa-bars"></i>
       </button>
-    </div>
+    </div> -->
+
+
   </header>
 
   <div class="cart">
@@ -66,19 +73,39 @@
 
   <main class="hero-section" id="home">
     <div class="contents">
-      <h1 class="h1text">
-        Freshly <span class="foo">Baked</span>, Just For <span class="foo">You</span>!
-      </h1>
-      <p>
-        Experience the best in culinary delights, freshly prepared and delivered right to your doorstep. Indulge in
-        mouth-watering dishes, crafted with the finest ingredients, for a truly satisfying meal anytime, anywhere.
-      </p>
+      <div class="content">
+        <h1 class="h1text">
+          Freshly <span class="foo">Baked</span>, Just For <span class="foo">You</span>!
+        </h1>
+        <p>
+          Experience the best in culinary delights, freshly prepared and delivered right to your doorstep. Indulge in
+          mouth-watering dishes, crafted with the finest ingredients, for a truly satisfying meal anytime, anywhere.
+        </p>
 
-      <div class="ctas">
-        <button class="btn1"><a target="_blank" href="signup.html">Order Now</a></button>
-        <!-- <button class="btn2">Book a Table</button> -->
+        <div class="numbers">
+          <span>
+            <h1>100+</h1>
+            <h5>Snacks</h5>
+          </span>|
+          <span>
+            <h1>100+</h1>
+            <h5 class="numtext">Snacks</h5>
+          </span>|
+          <span>
+            <h1>100+</h1>
+            <h5 class="numtext">Snacks</h5>
+          </span>
+        </div>
+
+        <span class="ctas">
+          <button class="btn1"><a target="_blank" href="signup.html">Order Now</a></button>
+        </span>
       </div>
-    </div>/
+
+      <div class="hero-img">
+        <img src="Imgs/newimgs (2).jpeg" alt="">
+      </div>
+    </div>
   </main>
 
   <section id="about-us">
@@ -87,24 +114,28 @@
         <img src="Imgs/newimgs (4).jpeg" alt="" />
       </div>
       <div class="text">
-        <h1 class="abouttext">About Empire<span class="foo">Bakes</span></h1>
+        <h1 class="abouttext">About <span class="foo">Us</span></h1>
         <p>
-          At Empire, we don’t just make meals — we create flavor experiences. Every dish is crafted by some of the
-          best chefs in the industry, blending top-tier ingredients with world-class culinary skill.
-          <!-- Whether you're grabbing a quick lunch, enjoying a family dinner, or catering a special event, Tasty-Food
-          delivers flavors that impress, nourish, and leave you craving more. We don’t just cook meals — we create
-          moments of joy, one dish at a time. -->
+          At EmpireBakes, we believe that the best food tells a story. Our journey began with a simple idea: to
+          bring the warmth and comfort of traditionally baked goods, made with heart, directly to your table.
         </p>
+        <p>
+          We source ingredients for their purest flavor; the richest butter, the finest cocoa, the freshest
+          seasonal fruit. Each item is meticulously prepared by our expert bakers, focusing on achieving the perfect
+          aroma, texture, and unforgettable taste that defines true craftsmanship.
+        </p>
+        <p class="italics"> Experience the difference. It's more than a
+          meal; it's a
+          moment of indulgent joy.
         </p>
         <div class="ctas">
-          <!-- <button class="btn3">Order Now</button> -->
-          <!-- <button class="btn4">Book a Table</button> -->
+          <button class="btn2"><a target="_self" href="#product">Explore Our Menu</a></button>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="product">
+  <!-- <section id="product">
     <div class="productheading">
       <h1>Our<span class="foo"> Products</span></h1>
     </div>
@@ -121,6 +152,11 @@
             <button class="addbtn">Add to Cart</button>
           </div>
         </div>
+        <div class="qty-box" style="display:none">
+          <button class="qty-minus">-</button>
+          <span class="qty-value">1</span>
+          <button class="qty-plus">+</button>
+        </div>
       </div>
       <div class="product-card">
         <div class="pimage">
@@ -131,7 +167,7 @@
           <p>Loaded with fresh toppings and melted cheese.</p>
           <div class="txtprc">
             <p class="price"> ₦800</p>
-            <button onclick="showToast()" class="addbtn">Add to Cart</button>
+            <button class="addbtn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
           </div>
         </div>
       </div>
@@ -144,7 +180,8 @@
           <p>Loaded with fresh toppings and melted cheese.</p>
           <div class="txtprc">
             <p class="price">₦1,000</p>
-            <button onclick="showToast()" class="addbtn">Add to Cart</button>
+            <button class="addbtn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+
           </div>
         </div>
       </div>
@@ -157,7 +194,7 @@
           <p>Loaded with fresh toppings and melted cheese.</p>
           <div class="txtprc">
             <p class="price">₦1,500</p>
-            <button onclick="showToast()" class="addbtn">Add to Cart</button>
+            <button class="addbtn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
           </div>
         </div>
       </div>
@@ -170,7 +207,7 @@
           <p>Loaded with fresh toppings and melted cheese.</p>
           <div class="txtprc">
             <p class="price">₦1,200</p>
-            <button onclick="showToast()" class="addbtn">Add to Cart</button>
+            <button class="addbtn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
           </div>
         </div>
       </div>
@@ -183,7 +220,7 @@
           <p>Loaded with fresh toppings and melted cheese.</p>
           <div class="txtprc">
             <p class="price">₦1,200</p>
-            <button onclick="showToast()" class="addbtn">Add to Cart</button>
+            <button class="addbtn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
           </div>
         </div>
       </div>
@@ -196,7 +233,7 @@
           <p>Loaded with fresh toppings and melted cheese.</p>
           <div class="txtprc">
             <p class="price">₦800</p>
-            <button onclick="showToast()" class="addbtn">Add to Cart</button>
+            <button class="addbtn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
           </div>
         </div>
       </div>
@@ -209,13 +246,13 @@
           <p>Loaded with fresh toppings and melted cheese.</p>
           <div class="txtprc">
             <p class="price">₦18,000</p>
-            <button class="addbtn">Add to Cart</button>
+            <button class="addbtn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
           </div>
         </div>
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <section id="services" class="foodcards-section">
     <h1>Why Choose <span class="foo">Us</span>?</h1>
@@ -238,7 +275,7 @@
     </div>
   </section>
 
-<section class="customerreview">
+  <section class="customerreview">
     <h1>"Customer <span class="foo">Reviews"</span></h1>
     <div class="cards">
       <div class="card">
@@ -247,22 +284,68 @@
         <p>"The food was absolutely delicious and arrived hot and fresh. Highly recommend EmpireBakes!"</p>
       </div>
       <div class="card">
-        <img src="Imgs/customer (5).jpeg" class="custimg" alt="">       
-         <h3>Sam Adeniyi</h3>
+        <img src="Imgs/customer (5).jpeg" class="custimg" alt="">
+        <h3>Sam Adeniyi</h3>
         <p>"Exceptional service and mouth-watering dishes. EmpireBakes is my go-to for tasty meals!"</p>
       </div>
       <div class="card">
-        <img src="Imgs/customer (2).jpg" class="custimg" alt="">        
+        <img src="Imgs/customer (2).jpg" class="custimg" alt="">
         <h3>Mary Johnson</h3>
         <p>"I love the variety on the menu and the quality of the food. EmpireBakes never disappoints!"</p>
       </div>
       <div class="card">
-        <img src="Imgs/customer (4).jpg" class="custimg" alt="">        
+        <img src="Imgs/customer (4).jpg" class="custimg" alt="">
         <h3>John Smith</h3>
         <p>"I love the variety on the menu and the quality of the food. EmpireBakes never disappoints!"</p>
       </div>
     </div>
-</section>
+  </section>
+
+  <footer id="contact">
+    <div class="items">
+      <div class="item">
+        <div class="itemh1">
+          <h1>CONTACT US</h1>
+        </div>
+        <div class="itemp">
+          <p>1247/plot No. 39,colony, USA</p>
+          <p>08027144055</p>
+          <p>info@example.com</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="itemh1">
+          <h1>OUR LINKS</h1>
+        </div>
+        <div class="itemp">
+          <p>1247/plot No. 39,colony, USA</p>
+          <p>08027144055</p>
+          <p>info@example.com</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="itemh1">
+          <h1>OUR SERVICES</h1>
+        </div>
+        <div class="itemp">
+          <p>1247/plot No. 39,colony, USA</p>
+          <p>08027144055</p>
+          <p>info@example.com</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="itemh1">
+          <h1>HELP CENTER</h1>
+        </d
+        iv>
+        <div class="itemp">
+          <p>1247/plot No. 39,colony, USA</p>
+          <p>08027144055</p>
+          <p>info@example.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <div id="toastContainer"></div>
