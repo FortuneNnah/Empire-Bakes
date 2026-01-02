@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
+
 <body>
   <div class="container">
     <form action="#">
@@ -22,7 +24,7 @@
 
         <label for="password">Password</label>
         <input id="password" type="password" placeholder="Enter password" required />
-        
+
 
         <label for="confirm">Confirm Password</label>
         <input id="confirm" type="password" placeholder="Re-enter password" required />
@@ -30,24 +32,106 @@
 
       <div class="check">
         <input type="checkbox" id="policy" required />
-        <label for="policy">I agree with the <span class="privacy">privacy policy</span></label>
+        <label style="color: #fff;" for="policy">I agree with the <span class="privacy">privacy policy</span></label>
       </div>
-      <p class="signin">Already have an account? <span><a target="_self" href="signin.html">Sign in</a></span></p>
-      <button type="submit" class="signup">Sign Up</button>
+      <p style="color: #fff;" class="signin">Already have an account? <span><a target="_self" href="signin.html">Sign in</a></span></p>
+      <button id="submit" type="submit" class="signup">Sign Up</button>
+
+      <div id="status-message" class="status-message"></div>
 
       <div class="socials">
-<button type="button" class="google">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22">
-    <path fill="#EA4335" d="M24 9.5c3.3 0 6.2 1.2 8.5 3.3l6.3-6.3C34.8 2.4 29.7 0 24 0 14.6 0 6.7 5.7 2.8 14l7.4 5.7C11.6 13.1 17.3 9.5 24 9.5z"/>
-    <path fill="#34A853" d="M46.1 24.5c0-1.4-.1-2.8-.4-4.1H24v8h12.5c-.5 2.7-1.9 5.1-4 6.9l6.3 4.9c3.7-3.4 5.8-8.3 5.8-13.7z"/>
-    <path fill="#FBBC05" d="M10.2 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3l-7.4-5.7C.9 17.3 0 20.6 0 24s.9 6.7 2.8 9.9l7.4-5.6z"/>
-    <path fill="#4285F4" d="M24 48c6.5 0 11.9-2.1 15.8-5.7l-6.3-4.9c-1.8 1.2-4.1 1.9-6.5 1.9-6.7 0-12.4-4.6-14.4-10.9l-7.4 5.7C6.7 42.3 14.6 48 24 48z"/>
-  </svg>
-  <span>Continue with Google</span>
-</button>
+        <button type="button" class="google">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22">
+            <path fill="#EA4335"
+              d="M24 9.5c3.3 0 6.2 1.2 8.5 3.3l6.3-6.3C34.8 2.4 29.7 0 24 0 14.6 0 6.7 5.7 2.8 14l7.4 5.7C11.6 13.1 17.3 9.5 24 9.5z" />
+            <path fill="#34A853"
+              d="M46.1 24.5c0-1.4-.1-2.8-.4-4.1H24v8h12.5c-.5 2.7-1.9 5.1-4 6.9l6.3 4.9c3.7-3.4 5.8-8.3 5.8-13.7z" />
+            <path fill="#FBBC05"
+              d="M10.2 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3l-7.4-5.7C.9 17.3 0 20.6 0 24s.9 6.7 2.8 9.9l7.4-5.6z" />
+            <path fill="#4285F4"
+              d="M24 48c6.5 0 11.9-2.1 15.8-5.7l-6.3-4.9c-1.8 1.2-4.1 1.9-6.5 1.9-6.7 0-12.4-4.6-14.4-10.9l-7.4 5.7C6.7 42.3 14.6 48 24 48z" />
+          </svg>
+          <span>Continue with Google</span>
+        </button>
 
       </div>
     </form>
   </div>
 </body>
+<script src="script.js"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script>
+ // 1. Ensure supabase is defined
+const { createClient } = supabase;
+const supabaseClient = createClient('https://xcclytykrorksjasxxyw.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjY2x5dHlrcm9ya3NqYXN4eHl3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNTk1OTIsImV4cCI6MjA4MjczNTU5Mn0.pwTwPI7Kijm-KY0f8tZe_GxzAsb1dz7NX6Ap-JZmMDI');
+
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const confirmInput = document.getElementById("confirm"); // Check if your HTML ID is 'password' or 'confirm'
+const statusMessage = document.getElementById("status-message"); 
+
+const signupBtn = document.getElementById("submit");
+
+const signUp = async (event) => {
+  event.preventDefault();
+
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  const confirmPassword = document.getElementById("confirm").value;
+
+  // 1. Reset Message State
+  statusMessage.textContent = "";
+  statusMessage.className = "status-message"; 
+  statusMessage.style.display = "none";
+
+  if (password !== confirmPassword) {
+    showMessage("Passwords do not match.", "error");
+    return;
+  }
+
+  if (password.length < 8) {
+    showMessage("Password must be at least 8 characters.", "error");
+    return;
+  }
+
+  // 3. Set Loading State
+  signupBtn.disabled = true;
+  signupBtn.innerHTML = '<div class="spinner"></div> Creating Account...';
+  
+  // 4. Supabase Call
+  const { data, error } = await supabaseClient.auth.signUp({
+    email: email,
+    password: password,
+  });
+
+  // 5. Handle Response
+  signupBtn.disabled = false;
+  signupBtn.innerHTML = 'Sign Up'; // Reset button text
+
+  if (error) {
+    showMessage("Error: " + error.message, "error");
+  } else {
+    showMessage("Success! Please check your email for confirmation.", "success");
+    // Clear inputs on success
+    emailInput.value = "";
+    passwordInput.value = "";
+    document.getElementById("confirm").value = "";
+  }
+};
+
+// Helper function to manage status message visibility and color
+function showMessage(text, type) {
+  statusMessage.textContent = text;
+  statusMessage.style.display = "block";
+  statusMessage.classList.remove("success", "error");
+  if (type) {
+    statusMessage.classList.add(type);
+  }
+}
+
+// Ensure you use the submit event on the form
+document.querySelector("form").addEventListener('submit', signUp);
+
+
+</script>
 </html>
